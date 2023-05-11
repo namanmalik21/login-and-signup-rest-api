@@ -1,4 +1,4 @@
-# Steps to Run Spring Boot Blog App
+# Steps to Run Spring Boot Rest API
 ## 1. Maven Build the Project
 If you have installed Maven on your machine then use the below command:
 ```
