@@ -29,4 +29,4 @@ User below Insert SQL statements to insert records into roles table:
 ```sql
 INSERT INTO `mydata.roles` VALUES (1,'ROLE_ADMIN'),(2,'ROLE_USER');
 ```
-Now, Spring boot blog application is ready to use
+Now, Spring boot bapplication is ready to use
