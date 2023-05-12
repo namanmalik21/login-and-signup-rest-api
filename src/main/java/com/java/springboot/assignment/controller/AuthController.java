@@ -1,9 +1,9 @@
 package com.java.springboot.assignment.controller;
-import com.java.springboot.assignment.model.Role;
+
 import com.java.springboot.assignment.model.User;
 import com.java.springboot.assignment.payload.LoginDto;
 import com.java.springboot.assignment.payload.SignUpDto;
-import com.java.springboot.assignment.repository.RoleRepository;
+
 import com.java.springboot.assignment.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,7 +31,7 @@ public class AuthController {
     private UserRepository userRepository;
 
     @Autowired
-    private RoleRepository roleRepository;
+  
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -65,9 +65,7 @@ public class AuthController {
         user.setEmail(signUpDto.getEmail());
         user.setPassword(passwordEncoder.encode(signUpDto.getPassword()));
 
-        Role roles = roleRepository.findByName("ROLE_ADMIN").get();
-        user.setRoles(Collections.singleton(roles));
-
+        
         userRepository.save(user);
 
         return new ResponseEntity<>("User registered successfully", HttpStatus.OK);
